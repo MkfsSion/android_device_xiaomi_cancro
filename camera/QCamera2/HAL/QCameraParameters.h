@@ -19,7 +19,7 @@
 #ifndef ANDROID_HARDWARE_QCAMERA_PARAMETERS_H
 #define ANDROID_HARDWARE_QCAMERA_PARAMETERS_H
 
-#include <camera/CameraParameters.h>
+#include "CameraParameters.h"
 #include <cutils/properties.h>
 #include <hardware/camera.h>
 #include <stdlib.h>
