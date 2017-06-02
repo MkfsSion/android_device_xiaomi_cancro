@@ -33,7 +33,7 @@ LOCAL_SRC_FILES := \
     src/mm_jpegdec.c
 
 LOCAL_MODULE := libmmjpeg_interface
-LOCAL_SHARED_LIBRARIES := libdl libcutils liblog libqomx_core
+LOCAL_SHARED_LIBRARIES := libdl libcutils liblog libqomx_core libutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 

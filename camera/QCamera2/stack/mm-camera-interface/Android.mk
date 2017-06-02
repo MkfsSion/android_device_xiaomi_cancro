@@ -34,7 +34,7 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_CFLAGS += -Wall -Wextra -Wno-address
 
 LOCAL_MODULE := libmmcamera_interface
-LOCAL_SHARED_LIBRARIES := libdl libcutils liblog
+LOCAL_SHARED_LIBRARIES := libdl libcutils liblog libutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 
