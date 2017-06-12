@@ -15,7 +15,6 @@ LOCAL_SRC_FILES := \
     QCameraPostProc.cpp \
     QCamera2HWICallbacks.cpp \
     QCameraParameters.cpp \
-    CameraParameters.cpp \
     QCameraThermalAdapter.cpp \
     wrapper/QualcommCamera.cpp
 
