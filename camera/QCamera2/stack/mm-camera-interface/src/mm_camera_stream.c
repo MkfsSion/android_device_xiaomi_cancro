@@ -39,6 +39,7 @@
 #ifdef VENUS_PRESENT
 #include <media/msm_media_info.h>
 #endif
+#include <unistd.h>
 
 #include "mm_camera_dbg.h"
 #include "mm_camera_interface.h"

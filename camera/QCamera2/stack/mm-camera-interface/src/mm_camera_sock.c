@@ -32,6 +32,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
+#include <unistd.h>
 
 #include "mm_camera_dbg.h"
 #include "mm_camera_sock.h"
