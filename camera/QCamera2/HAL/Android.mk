@@ -56,6 +56,7 @@ LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libnativewindow
 LOCAL_SHARED_LIBRARIES += android.hidl.token@1.0-utils
 LOCAL_SHARED_LIBRARIES += android.hardware.graphics.bufferqueue@1.0
+LOCAL_HEADER_LIBRARIES := media_plugin_headers
 LOCAL_STATIC_LIBRARIES += android.hardware.camera.common@1.0-helper
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib/hw
