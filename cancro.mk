@@ -1,6 +1,3 @@
-# Common QCOM configuration tools
-$(call inherit-product, device/qcom/common/Android.mk)
-
 LOCAL_PATH := device/xiaomi/cancro
 
 DEVICE_PACKAGE_OVERLAYS += \

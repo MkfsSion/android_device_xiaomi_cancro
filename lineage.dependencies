@@ -1,9 +1,5 @@
 [
  {
-   "repository": "android_vendor_xiaomi_cancro",
-   "target_path": "vendor/xiaomi/cancro"
- },
- {
    "repository": "android_kernel_xiaomi_virgo",
    "target_path": "kernel/xiaomi/virgo"
  }
