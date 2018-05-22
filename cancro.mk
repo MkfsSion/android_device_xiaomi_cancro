@@ -328,6 +328,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
