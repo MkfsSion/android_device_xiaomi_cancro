@@ -41,6 +41,9 @@ TARGET_CPU_ABI2     := armeabi
 TARGET_CPU_SMP      := true
 TARGET_CPU_VARIANT  := krait
 
+# Binder API
+TARGET_USES_64_BIT_BINDER := true
+
 # Extended filesystem support
 TARGET_EXFAT_DRIVER := sdfat
 
