@@ -631,6 +631,10 @@ service hvdcp /vendor/bin/hvdcp
     class core
     user root
 
+service acdblink /vendor/bin/init.acdb.sh
+    disabled
+    oneshot
+
 service charger_monitor /vendor/bin/charger_monitor
     user system
     group system
