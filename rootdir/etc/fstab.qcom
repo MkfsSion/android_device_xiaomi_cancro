@@ -7,6 +7,7 @@
 /dev/block/platform/msm_sdcc.1/by-name/cache        /cache          f2fs    rw,nosuid,nodev,noatime,nodiratime,inline_xattr                 wait,check
 /dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic wait,check
 /dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1                                                                wait,recoveryonly
+/dev/block/platform/msm_sdcc.1/by-name/vendor       /vendor         ext4    ro,barrier=1								wait,recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/userdata     /data           f2fs    rw,nosuid,nodev,noatime,nodiratime,inline_xattr                 wait,check,encryptable=/dev/block/platform/msm_sdcc.1/by-name/bk1
 /dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    nosuid,nodev,barrier=1,noauto_da_alloc,discard                  wait,check,encryptable=/dev/block/platform/msm_sdcc.1/by-name/bk1
 /dev/block/platform/msm_sdcc.1/by-name/persist      /persist        ext4    nosuid,nodev,barrier=1,data=ordered,nodelalloc,nomblk_io_submit,errors=panic  wait,check
@@ -21,5 +22,4 @@
 /dev/block/platform/msm_sdcc.1/by-name/tz           /tz             emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/rpm          /rpm            emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/aboot        /aboot          emmc    defaults                                                        defaults
-
 /devices/platform/xhci-hcd/usb1*                     auto            auto    defaults                                                        voldmanaged=usbotg:auto
