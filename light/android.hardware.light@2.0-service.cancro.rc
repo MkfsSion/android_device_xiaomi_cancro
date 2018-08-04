@@ -1,0 +1,35 @@
+on init
+    # LCD backlight
+    chown system system /sys/class/leds/lcd-backlight/brightness
+
+    # Button backlight
+    chown system system /sys/class/leds/button-backlight1/brightness
+    chown system system /sys/class/leds/button-backlight/brightness
+
+    # RGB lights
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/green/brightness
+    chown system system /sys/class/leds/blue/brightness
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/blue/blink
+
+    chown system system /sys/class/leds/red/ramp_step_ms
+    chown system system /sys/class/leds/green/ramp_step_ms
+    chown system system /sys/class/leds/blue/ramp_step_ms
+    chown system system /sys/class/leds/red/duty_pcts
+    chown system system /sys/class/leds/green/duty_pcts
+    chown system system /sys/class/leds/blue/duty_pcts
+
+    chmod 0660 /sys/class/leds/red/ramp_step_ms
+    chmod 0660 /sys/class/leds/green/ramp_step_ms
+    chmod 0660 /sys/class/leds/blue/ramp_step_ms
+    chmod 0660 /sys/class/leds/red/duty_pcts
+    chmod 0660 /sys/class/leds/green/duty_pcts
+    chmod 0660 /sys/class/leds/blue/duty_pcts
+
+
+service light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.cancro
+    class hal
+    user system
+    group system
