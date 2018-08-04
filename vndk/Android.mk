@@ -35,6 +35,7 @@ EXTRA_VENDOR_LIBRARIES := \
     libhardware_legacy \
     android.hardware.configstore@1.0 \
     android.hardware.configstore-utils \
+    android.hardware.nfc@1.0
 
 #-------------------------------------------------------------------------------
 # VNDK Modules

@@ -31,6 +31,7 @@ if [ $RAW_ID == 1974 ] || [ $RAW_ID == 1972 ]; then
     rm -rf /vendor/vendor/firmware/*bcm*
     rm -rf /vendor/lib/hw/android.hardware.nfc@1.0-impl-bcm.so
     rm -rf /vendor/bin/hw/android.hardware.nfc@1.0-service
+    rm -rf /vendor/lib/android.hardware.nfc@1.0.so
     # Use Mi4 audio configs
     rm -f /vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
     mv /vendor/etc/acdbdata/MTP/MTP_Speaker_cal_4.acdb /vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
