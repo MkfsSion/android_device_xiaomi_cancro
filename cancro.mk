@@ -44,11 +44,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf
 
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
+    android.hardware.gnss@1.0-impl \
+    android.hardware.gnss@1.0-service
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -57,7 +59,8 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap \
     camera.device@1.0-impl-legacy \
-    android.hardware.camera.provider@2.4-impl-legacy
+    android.hardware.camera.provider@2.4-impl-legacy \
+    android.hardware.camera.provider@2.4-service
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -66,12 +69,14 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service \
     lights.msm8974
 
 # Power
 PRODUCT_PACKAGES += \
     libshim_atomic \
     android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service \
     power.msm8974
 
 # Vibrator
@@ -121,7 +126,8 @@ PRODUCT_COPY_FILES += \
 
 # IR
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/manifest_mi4.xml:$(TARGET_COPY_OUT_VENDOR)/manifest_mi4.xml
@@ -129,6 +135,7 @@ PRODUCT_COPY_FILES += \
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl-bcm \
+    android.hardware.nfc@1.0-service \
     nfc_nci.bcm2079x.default \
     NfcNci \
     Tag
@@ -199,9 +206,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@2.0-service \
     android.hardware.broadcastradio@1.0-impl \
     android.hardware.soundtrigger@2.0-impl \
+    android.hardware.soundtrigger@2.0-service \
     audiod \
     audio.a2dp.default \
     audio_policy.msm8974 \
@@ -217,7 +227,8 @@ PRODUCT_PACKAGES += \
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
     libbt-vendor \
-    android.hardware.bluetooth@1.0-impl
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -283,7 +294,8 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8974 \
-    android.hardware.sensors@1.0-impl
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
