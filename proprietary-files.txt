@@ -443,8 +443,8 @@ bin/rfs_access:vendor/bin/rfs_access
 bin/rmt_storage:vendor/bin/rmt_storage
 etc/data/dsi_config.xml:vendor/etc/data/dsi_config.xml
 etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config.xml
-etc/permissions/qcnvitems.xml:vendor/etc/permissions/qcnvitems.xml
-etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml
+etc/permissions/qcnvitems.xml:vendor/etc/permissions/qcnvitems.xml|f8e863461bfb2e7fc9a36a9fca108d7b51e5600d
+etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml|cf740b4339659e7a30cabcd1c2fe5066e69b8760
 framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
 framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
 framework/qti-telephony-common.jar:vendor/framework/qti-telephony-common.jar
