@@ -56,8 +56,8 @@ LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libnativewin
 LOCAL_SHARED_LIBRARIES += android.hidl.token@1.0-utils
 LOCAL_SHARED_LIBRARIES += android.hardware.graphics.bufferqueue@1.0
 
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib/hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
-
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)

@@ -92,8 +92,8 @@ start_charger_monitor()
 
 start_copying_prebuilt_qcril_db()
 {
-    if [ -f /system/vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
-        cp /system/vendor/qcril.db /data/misc/radio/qcril.db
+    if [ -f /vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
+        cp /vendor/qcril.db /data/misc/radio/qcril.db
         chown -h radio.radio /data/misc/radio/qcril.db
     fi
 }
@@ -118,9 +118,9 @@ esac
 
 # start sensor related operation when the device is not X5
 if [ $(getprop ro.boot.hwversion | grep -e 5[0-9]) ]; then
-    /system/bin/log -p e -t "SensorSelect" "Device is X5, not call 'start_sensors'"
+    /vendor/bin/log -p e -t "SensorSelect" "Device is X5, not call 'start_sensors'"
 else
-    /system/bin/log -p e -t "SensorSelect" "Device is not X5, call 'start_sensors'"
+    /vendor/bin/log -p e -t "SensorSelect" "Device is not X5, call 'start_sensors'"
     start_sensors
 fi
 

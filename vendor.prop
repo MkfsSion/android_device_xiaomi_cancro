@@ -29,7 +29,7 @@ ro.bluetooth.alwaysbleon=true
 # System property for cabl
 ro.qualcomm.cabl=0
 ro.qcom.ad=1
-ro.qcom.ad.calib.data=/system/etc/calib.cfg
+ro.qcom.ad.calib.data=/vendor/etc/calib.cfg
 ro.qcom.ad.sensortype=2
 ro.qualcomm.sensors.qmd=true
 ro.qualcomm.sensors.smd=true

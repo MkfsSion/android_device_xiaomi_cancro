@@ -6502,7 +6502,6 @@ bool QCamera2HardwareInterface::needDualReprocess()
 
 /*===========================================================================
 
->>>>>>> c709c9a... Camera: Block CancelAF till HAL receives AF event.
  * FUNCTION   : needReprocess
  *
  * DESCRIPTION: if reprocess is needed

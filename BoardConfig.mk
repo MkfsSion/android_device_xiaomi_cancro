@@ -184,6 +184,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
+# Properites
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Use HW crypto for ODE
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_LEGACY_HW_DISK_ENCRYPTION := true
@@ -192,7 +196,7 @@ TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Shim
-TARGET_LD_SHIM_LIBS := /system/vendor/lib/libFaceProc.so|libshim_dso_handle.so
+TARGET_LD_SHIM_LIBS := /vendor/lib/libFaceProc.so|libshim_dso_handle.so
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
