@@ -437,7 +437,7 @@ vendor/lib/libsystem_health_mon.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd:vendor/bin/netmgrd
-bin/qmuxd:vendor/bin/qmuxd
+bin/qmuxd:vendor/bin/qmuxd|594573524652c522b89b9afefe8800dea6fc9470
 bin/radish:vendor/bin/radish
 bin/rfs_access:vendor/bin/rfs_access
 bin/rmt_storage:vendor/bin/rmt_storage
