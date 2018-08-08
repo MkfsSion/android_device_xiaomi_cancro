@@ -271,6 +271,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service
 
+# Thermal config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine-perf.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-perf.conf
+
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts

@@ -219,11 +219,22 @@ service ppd /vendor/bin/mm-pp-daemon
 on property:init.svc.surfaceflinger=stopped
     stop ppd
 
+service thermal-engine /vendor/bin/thermal-engine --config /vendor/etc/thermal-engine-perf.conf
+    class main
+    user root
+    group root
+    socket thermal-send-client stream 0666 system system
+    socket thermal-recv-client stream 0660 system system
+    socket thermal-recv-passive-client stream 0666 system system
+
 service changepowermode /vendor/bin/changepowermode.sh
     user root
     oneshot
     disabled
-    
+
+on property:sys.perf.profile=*
+    start changepowermode
+
 on property:persist.sys.display_prefer=0
     write /sys/devices/virtual/graphics/fb0/msm_fb_dispparam 0x2
 on property:persist.sys.display_prefer=1

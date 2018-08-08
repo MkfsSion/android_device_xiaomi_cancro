@@ -484,6 +484,11 @@ bin/time_daemon:vendor/bin/time_daemon
 -vendor/lib/libTimeService.so
 -app/TimeService/TimeService.apk:vendor/app/TimeService/TimeService.apk
 
+# Thermal
+vendor/bin/thermal-engine
+vendor/lib/libthermalclient.so
+vendor/lib/libthermalioctl.so
+
 # Venus (media) firmware
 etc/firmware/venus.b00:vendor/firmware/venus.b00
 etc/firmware/venus.b01:vendor/firmware/venus.b01
