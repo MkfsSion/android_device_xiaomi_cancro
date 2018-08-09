@@ -18,7 +18,7 @@
 #define LOG_NDEBUG 0
 
 #include <cutils/log.h>
-
+#include <stdio.h>
 #include <string.h>
 
 #define MAC_ADDR_SIZE 6
