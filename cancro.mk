@@ -54,7 +54,6 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libshim_dso_handle \
     camera.msm8974 \
     libxml2 \
     Snap \
@@ -72,7 +71,6 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    libshim_atomic \
     android.hardware.power@1.0-impl \
     android.hardware.power@1.0-service \
     power.msm8974
@@ -315,6 +313,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.print.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.print.xml
+
+# Shim
+PRODUCT_PACKAGES += \
+    libshims_vendor
 
 # VNDK
 PRODUCT_PACKAGES += \

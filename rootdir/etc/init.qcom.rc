@@ -34,7 +34,7 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-    export LD_PRELOAD libshim_atomic.so
+    export LD_PRELOAD /vendor/lib/libshims_vendor.so
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
