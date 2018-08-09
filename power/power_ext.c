@@ -17,6 +17,7 @@
 #include <errno.h>
 #include <string.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 #define LOG_TAG "PowerHAL_H_Ext"
 #include <utils/Log.h>

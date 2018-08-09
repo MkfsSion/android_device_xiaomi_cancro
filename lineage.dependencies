@@ -4,10 +4,6 @@
    "target_path": "vendor/xiaomi/cancro"
  },
  {
-   "repository": "android_device_qcom_common",
-   "target_path": "device/qcom/common"
- },
- {
    "repository": "android_kernel_xiaomi_virgo",
    "target_path": "kernel/xiaomi/virgo"
  }
