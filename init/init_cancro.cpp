@@ -130,6 +130,7 @@ void vendor_load_properties()
     property_override_dual("ro.product.name", "ro.vendor.product.name", "cancro");
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Xiaomi/cancro/cancro:6.0.1/MMB29M/V8.1.6.0.MXDMIDI:user/release-keys");
     property_override("ro.build.description", "cancro-user 6.0.1 MMB29M V8.1.6.0.MXDMIDI release-keys");
+    property_override("ro.bootimage.build.fingerprint", "Xiaomi/cancro/cancro:6.0.1/MMB29M/V8.1.6.0.MXDMIDI:user/release-keys");
 
     switch (raw_id) {
         case 1974:
