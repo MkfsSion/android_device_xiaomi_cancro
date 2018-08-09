@@ -20,7 +20,7 @@
 
 #define MAC_ADDR_SIZE 6
 
-#include <cutils/log.h>
+#include <log/log.h>
 
 extern int qmi_nv_read_wlan_mac(unsigned char** mac);
 
