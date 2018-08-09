@@ -37,7 +37,6 @@
 #include <utils/Errors.h>
 #include <utils/Trace.h>
 #include <gralloc_priv.h>
-#include <gui/Surface.h>
 
 #include "QCamera2HWI.h"
 #include "QCameraMem.h"
@@ -438,7 +437,7 @@ int QCamera2HardwareInterface::start_recording(struct camera_device *device)
     if ((width * height) >= (1280 * 720)) {
         char *orig_params = hw->getParameters();
         if (orig_params) {
-            android::CameraParameters params;
+            CameraParameters params;
             params.unflatten(android::String8(orig_params));
             hw->putParameters(orig_params);
 
@@ -812,7 +811,7 @@ char* QCamera2HardwareInterface::get_parameters(struct camera_device *device)
         hw->waitAPIResult(QCAMERA_SM_EVT_GET_PARAMS, &apiResult);
 
         if (apiResult.params) {
-            android::CameraParameters params;
+            CameraParameters params;
             params.unflatten(android::String8(apiResult.params));
             hw->putParameters(apiResult.params);
 
