@@ -205,9 +205,6 @@ TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 # Simple time service client
 BOARD_USES_QC_TIME_SERVICES := true
 
-# Shim
-TARGET_LD_SHIM_LIBS := /vendor/lib/libFaceProc.so|libshim_dso_handle.so
-
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
