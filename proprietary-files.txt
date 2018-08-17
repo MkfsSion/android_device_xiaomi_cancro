@@ -11,7 +11,7 @@ lib/rfsa/adsp/libfastcvadsp.so:vendor/lib/rfsa/adsp/libfastcvadsp.so
 lib/rfsa/adsp/libfastcvadsp_skel.so:vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 lib/rfsa/adsp/libscveT2T_skel.so:vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/libacdbmapper.so
-vendor/lib/libadsprpc.so
+vendor/lib/libadsprpc.so|fbc7fc9daaafa3f1fe38904fd21eeb3925fdcb03
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libscve.so
@@ -37,10 +37,8 @@ vendor/lib/soundfx/libqcvirt.so
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 etc/android_model_facea.dat:vendor/etc/android_model_facea.dat
 etc/android_model_faceg.dat:vendor/etc/android_model_faceg.dat
-etc/people_gender.dat:vendor/etc/people_gender.dat
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin:vendor/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca:vendor/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca
-etc/watermark_font_2300_3199.dat:vendor/etc/watermark_font_2300_3199.dat
 lib/libchromatix_imx135_liveshot.so:vendor/lib/libchromatix_imx135_liveshot.so
 lib/libchromatix_imx214_liveshot.so:vendor/lib/libchromatix_imx214_liveshot.so
 lib/libchromatix_imx215_liveshot.so:vendor/lib/libchromatix_imx215_liveshot.so
@@ -49,7 +47,7 @@ lib/libchromatix_imx224_liveshot.so:vendor/lib/libchromatix_imx224_liveshot.so
 lib/libchromatix_imx225_liveshot.so:vendor/lib/libchromatix_imx225_liveshot.so
 lib/libchromatix_imx226_liveshot.so:vendor/lib/libchromatix_imx226_liveshot.so
 lib/libchromatix_s5k3m2_liveshot.so:vendor/lib/libchromatix_s5k3m2_liveshot.so
-lib/libRecoFace.so:vendor/lib/libRecoFace.so
+lib/libRecoFace.so:vendor/lib/libRecoFace.so|ed9fcfac4aa1804423112b163263913c54d03d46
 vendor/lib/libAKM8963.so
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_ad5823_camcorder.so
@@ -439,7 +437,7 @@ vendor/lib/libsystem_health_mon.so
 bin/netmgrd:vendor/bin/netmgrd
 bin/qmuxd:vendor/bin/qmuxd|594573524652c522b89b9afefe8800dea6fc9470
 bin/radish:vendor/bin/radish
-bin/rfs_access:vendor/bin/rfs_access
+bin/rfs_access:vendor/bin/rfs_access|b0b00b1b1fb16773d179467f40b1e8734952bb43
 bin/rmt_storage:vendor/bin/rmt_storage
 etc/data/dsi_config.xml:vendor/etc/data/dsi_config.xml
 etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config.xml
