@@ -1,0 +1,25 @@
+# separate copy needed to use /sbin/linker instead of /system/bin/linker
+service sbinqseecomd /sbin/qseecomd
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
+on init
+    chmod 0660 /dev/qseecom
+    chown system drmrpc /dev/qseecom
+    chmod 0664 /dev/ion
+    chown system system /dev/ion
+
+on fs
+    wait /dev/block/platform/msm_sdcc.1
+    symlink /dev/block/platform/msm_sdcc.1 /dev/block/bootdevice
+    mkdir /firmware 0771 system system
+    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower uid=1000 gid=1000 dmask=227 fmask=337
+    setprop crypto.ready 1
+
+on property:crypto.ready=0 && property:ro.crypto.state=encrypted
+    stop sbinqseecomd
+
+on property:crypto.ready=1 && property:ro.crypto.state=encrypted
+    start sbinqseecomd
