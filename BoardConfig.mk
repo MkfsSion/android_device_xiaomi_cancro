@@ -229,9 +229,4 @@ include device/qcom/sepolicy/sepolicy.mk
 # sepolicy
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# TWRP Support
-ifeq ($(WITH_TWRP),true)
--include $(DEVICE_PATH)/twrp/twrp.mk
-endif
-
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
