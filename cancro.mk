@@ -330,9 +330,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-ifneq ($(QCPATH),)
-$(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)
-endif
-
 # call the proprietary setup
 $(call inherit-product, vendor/xiaomi/cancro/cancro-vendor.mk)
