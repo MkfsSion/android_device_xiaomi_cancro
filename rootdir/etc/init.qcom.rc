@@ -636,6 +636,10 @@ service acdblink /vendor/bin/init.acdb.sh
     disabled
     oneshot
 
+service gpslink /vendor/bin/init.gps.sh
+    disabled
+    oneshot
+
 service charger_monitor /vendor/bin/charger_monitor
     user system
     group system

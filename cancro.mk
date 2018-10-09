@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
     changepowermode.sh \
     init.qcom.bt.sh \
     init.qcom.fm.sh \
+    init.gps.sh \
     init.acdb.sh \
     init.class_main.sh \
     init.qcom.early_boot.sh \
