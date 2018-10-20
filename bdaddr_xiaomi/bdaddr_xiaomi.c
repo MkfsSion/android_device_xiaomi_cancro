@@ -45,6 +45,7 @@ int main()
 
     qmi_nv_read_bd_addr = (BD_ADDR_READ_FUN) dlsym(handle, "qmi_nv_read_bd_addr");
     if (!qmi_nv_read_bd_addr) {
+        dlclose(handle);
         ALOGE("Failed to get symbol qmi_nv_read_bd_addr,dlerror: %s", dlerror());
 	return 1;
     }
@@ -66,6 +67,10 @@ int main()
     fprintf(fp, "%02X:%02X:%02X:%02X:%02X:%02X\n",
             bt_addr[0], bt_addr[1], bt_addr[2], bt_addr[3], bt_addr[4], bt_addr[5]);
     fclose(fp);
+
+    dlclose(handle);
+    handle = NULL;
+    qmi_nv_read_bd_addr = NULL;
 
     ALOGV("%s was successfully generated", BD_ADDR_FILE);
 

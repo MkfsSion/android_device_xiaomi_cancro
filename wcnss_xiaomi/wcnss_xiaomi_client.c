@@ -49,6 +49,7 @@ int wcnss_qmi_get_wlan_address(unsigned char *pBdAddr)
 
     qmi_nv_read_wlan_mac = (WLAN_MAC_READ_FUN) dlsym(handle, "qmi_nv_read_wlan_mac");
     if (!qmi_nv_read_wlan_mac) {
+        dlclose(handle);
         ALOGE("Failed to get symbol qmi_nv_read_wlan_mac,dlerror:%s", dlerror());
         return 1;
     }
@@ -67,6 +68,10 @@ int wcnss_qmi_get_wlan_address(unsigned char *pBdAddr)
             pBdAddr[3],
             pBdAddr[4],
             pBdAddr[5]);
+
+    dlclose(handle);
+    handle = NULL;
+    qmi_nv_read_wlan_mac = NULL;
 
     return 0;
 }
