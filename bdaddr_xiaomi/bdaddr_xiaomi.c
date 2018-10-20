@@ -17,14 +17,16 @@
 #define LOG_TAG "bdaddr_xiaomi"
 #define LOG_NDEBUG 0
 
-#include <cutils/log.h>
 #include <stdio.h>
 #include <string.h>
+#include <dlfcn.h>
+#include <log/log.h>
 
 #define MAC_ADDR_SIZE 6
 #define BD_ADDR_FILE "/data/misc/bluetooth/bdaddr"
+#define PROPRIETARY_LIBRARY "libqminvapi.so"
 
-extern int qmi_nv_read_bd_addr(char** mac);
+typedef int (*BD_ADDR_READ_FUN) (char **mac);
 
 int main()
 {
@@ -32,6 +34,20 @@ int main()
     char* nv_bt_mac = NULL;
     int ret, i;
     FILE *fp;
+    void *handle = NULL;
+    BD_ADDR_READ_FUN qmi_nv_read_bd_addr = NULL;
+
+    handle = dlopen(PROPRIETARY_LIBRARY, RTLD_LAZY);
+    if (!handle) {
+        ALOGE("Failed to dlopen %s,dlerror:%s", PROPRIETARY_LIBRARY, dlerror());
+        return 1;
+    }
+
+    qmi_nv_read_bd_addr = (BD_ADDR_READ_FUN) dlsym(handle, "qmi_nv_read_bd_addr");
+    if (!qmi_nv_read_bd_addr) {
+        ALOGE("Failed to get symbol qmi_nv_read_bd_addr,dlerror: %s", dlerror());
+	return 1;
+    }
 
     // Read bluetooth address from modem NV
     ret = qmi_nv_read_bd_addr(&nv_bt_mac);

@@ -20,9 +20,13 @@
 
 #define MAC_ADDR_SIZE 6
 
+#include <stdio.h>
+#include <dlfcn.h>
 #include <log/log.h>
 
-extern int qmi_nv_read_wlan_mac(unsigned char** mac);
+#define PROPRIETARY_LIBRARY "libqminvapi.so"
+
+typedef int (*WLAN_MAC_READ_FUN) (unsigned char **mac);
 
 int wcnss_init_qmi(void)
 {
@@ -34,6 +38,20 @@ int wcnss_qmi_get_wlan_address(unsigned char *pBdAddr)
 {
     int i;
     unsigned char *buf = NULL;
+    void *handle = NULL;
+    WLAN_MAC_READ_FUN qmi_nv_read_wlan_mac = NULL;
+
+    handle = dlopen(PROPRIETARY_LIBRARY, RTLD_LAZY);
+    if (!handle) {
+        ALOGE("Failed to dlopen %s,dlerror:%s", PROPRIETARY_LIBRARY, dlerror());
+        return 1;
+    }
+
+    qmi_nv_read_wlan_mac = (WLAN_MAC_READ_FUN) dlsym(handle, "qmi_nv_read_wlan_mac");
+    if (!qmi_nv_read_wlan_mac) {
+        ALOGE("Failed to get symbol qmi_nv_read_wlan_mac,dlerror:%s", dlerror());
+        return 1;
+    }
 
     qmi_nv_read_wlan_mac(&buf);
 

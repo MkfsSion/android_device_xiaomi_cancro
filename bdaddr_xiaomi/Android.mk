@@ -6,5 +6,5 @@ LOCAL_MODULE_TAGS      := optional
 LOCAL_SRC_FILES        := bdaddr_xiaomi.c
 LOCAL_CFLAGS           += -Wall
 LOCAL_PROPRIETARY_MODULE := true
-LOCAL_SHARED_LIBRARIES := libc libcutils libutils liblog libqminvapi
+LOCAL_SHARED_LIBRARIES := libc libcutils libutils liblog
 include $(BUILD_EXECUTABLE)
